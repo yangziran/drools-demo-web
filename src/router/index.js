@@ -55,18 +55,31 @@ export const constantRoutes = [
     }]
   },
 
-  // {
-  //   path: '/form',
-  //   component: Layout,
-  //   children: [
-  //     {
-  //       path: 'index',
-  //       name: 'Form',
-  //       component: () => import('@/views/form/index'),
-  //       meta: { title: 'Form', icon: 'form' }
-  //     }
-  //   ]
-  // },
+  {
+    path: '/ruleflow',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'RuleFlow',
+        component: () => import('@/views/ruleflow/index'),
+        meta: { title: '规则流程', icon: 'tree-table', noCache: true }
+      }
+    ]
+  },
+
+  {
+    path: '/kie-editors-standalone',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'KieEditorsStandalone',
+        component: () => import('@/views/kie-editors-standalone/index'),
+        meta: { title: 'kie-editors-standalone', icon: 'el-icon-postcard', noCache: true }
+      }
+    ]
+  },
 
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
